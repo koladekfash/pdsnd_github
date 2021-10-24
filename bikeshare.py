@@ -254,6 +254,18 @@ def user_stats(df, city):
     print('-'*40)
 
 
+def program_stats():
+    """Load data
+    Returns:
+        df - Pandas DataFrame containing filtered data
+    """
+    print('\nGetting stats of admin of application ...\n')
+    start_time = time.time()
+    print('\nName: Amusat Kolade \nAge: 21')
+    print('\nProgam: Udacity-programming-for-Data-Science-With-Python-Nanodegree')
+    print('\nProject: Explore US Bikeshare Data')
+
+
 def raw_data(df, mark_place):
     """Display 5 line of sorted raw data each time."""
 
@@ -328,8 +340,9 @@ def main():
                                  "like to obtain.\n\n [ts] Time Stats\n [ss] "
                                  "Station Stats\n [tds] Trip Duration Stats\n "
                                  "[us] User Stats\n [rd] Display Raw Data\n "
+                                 "[ps] Program Stats\n "
                                  "[r] Restart\n\n>",
-                                 ('ts', 'ss', 'tds', 'us', 'rd', 'r'))
+                                 ('ts', 'ss', 'tds', 'us', 'rd', 'ps', 'r'))
             click.clear()
             if select_data == 'ts':
                 time_stats(df)
@@ -341,6 +354,8 @@ def main():
                 user_stats(df, city)
             elif select_data == 'rd':
                 mark_place = raw_data(df, mark_place)
+            elif select_data == 'ps':
+                program_stats()
             elif select_data == 'r':
                 break
 
