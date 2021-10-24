@@ -17,4 +17,4 @@ washington.csv
 
 ### Credits
 
-https://github.com/udacity/pdsnd_github
+This project was forked from https://github.com/udacity/pdsnd_github
